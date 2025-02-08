@@ -3,9 +3,10 @@ from js import Response
 
 async def on_fetch(request, env):
     # CloudflareのD1 DBに接続
-    db = env.get_db("d1_db")
-    # testテーブルからレコード取得
-    result = await db.query("SELECT * FROM test_tbl")
+    stmt = env.DB.prepare("SELECT * FROM test_tbl")
+
+    result = await stmt.all()
+
     # レスポンスを返す
     return Response.new(result)
 
