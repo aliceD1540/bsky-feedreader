@@ -25,7 +25,7 @@
    */
   "kv_namespaces": [
     {
-      "binding": "d1_db",
+      "binding": "bsky-feedreader",
       "id": "4ddeccd61c34462b86dd1af28fc68e29"
     }
   ]
